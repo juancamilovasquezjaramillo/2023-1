@@ -6,11 +6,12 @@ void colaOrdenada(Cola &c){
      printf(c.front());
   }
 }
-
+// aun me faltaaaaaaaaaa
+// aun no lo coloca en orden
 int maian(){
     Cola c;
-    c.enqueue(1);
-    c.enqueue(4);
-    c.enqueue(6);
     c.enqueue(8);
+    c.enqueue(4);
+    c.enqueue(7);
+    c.enqueue(1);
 }
