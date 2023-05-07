@@ -1,11 +1,17 @@
-#include 'lista.h'
+#ifndef BIG_INTEGER_H
+#define BIG_INTEGER_H
 
-#ifndef BIGINT_H
-#define BIGINT_H
+#include <string>
+#include <vector>
 
-typedef int Elemento;
+class BigInteger {
+private:
+    std::vector<int> digits;
 
+public:
+    BigInteger(const std::string& numberString);
+    BigInteger(const BigInteger& other);
 
-class Big{
-    
-}
+};
+
+#endif
