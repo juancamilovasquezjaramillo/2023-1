@@ -13,26 +13,26 @@ public:
     BigInteger(const std::string& numberString);
     BigInteger(const BigInteger& other);
     
-    BigInteger add(const BigInteger& other) const;
-    BigInteger product(const BigInteger& other) const;
-    BigInteger subtract(const BigInteger& other) const;
-    BigInteger quotient(const BigInteger& other) const;
-    BigInteger remainder(const BigInteger& other) const;
-    BigInteger pow(const BigInteger& exponent) const;
+    BigInteger add(BigInteger& other);
+    BigInteger product(BigInteger& other);
+    BigInteger subtract(BigInteger& other);
+    BigInteger quotient(BigInteger& other);
+    BigInteger remainder(BigInteger& other);
+    BigInteger pow(BigInteger& exponent);
 
-    std::string toString() const;
+    std::string toString();
 
-    BigInteger operator+(const BigInteger& other) const;
-    BigInteger operator-(const BigInteger& other) const;
-    BigInteger operator*(const BigInteger& other) const;
-    BigInteger operator/(const BigInteger& other) const;
-    BigInteger operator%(const BigInteger& other) const;
-    bool operator==(const BigInteger& other) const;
-    bool operator<(const BigInteger& other) const;
-    bool operator<=(const BigInteger& other) const;
+    BigInteger operator+(BigInteger& other);
+    BigInteger operator-(BigInteger& other);
+    BigInteger operator*(BigInteger& other);
+    BigInteger operator/(BigInteger& other);
+    BigInteger operator%(BigInteger& other);
+    bool operator==(BigInteger& other);
+    bool operator<(BigInteger& other);
+    bool operator<=(BigInteger& other);
 
-    static BigInteger sumarListaValores(const std::vector<BigInteger>& values);
-    static BigInteger multiplicarListaValores(const std::vector<BigInteger>& values);
+    static BigInteger sumarListaValores(std::vector<BigInteger>& values);
+    static BigInteger multiplicarListaValores(std::vector<BigInteger>& values);
 
 private:
     std::vector<int> digits_;
@@ -42,6 +42,4 @@ private:
 
 #endif
 
-};
 
-#endif
