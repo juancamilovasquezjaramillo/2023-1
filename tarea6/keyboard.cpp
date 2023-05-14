@@ -3,23 +3,25 @@
 #include <string>
 using namespace std;
 
-
-int main(){
+int main() {
     string texto;
-    while(getline(cin, texto)){;
+    while (getline(cin, texto)) {
         list<char> cadena;
         auto it = cadena.begin();
 
-        for(char letra : texto){
-            if(letra == '['){
+        for (int i = 0; i < texto.length(); i++) {
+            char letra = texto[i];
+            if (letra == '[') {
                 it = cadena.begin();
-            }else if(letra == ']'){
+            } else if (letra == ']') {
                 it = cadena.end();
-            }else{
+            } else {
                 cadena.insert(it, letra);          // O(1)
             }
         }
-        for(char letra : cadena){
+
+        for (auto it = cadena.begin(); it != cadena.end(); it++) {
+            char letra = *it;
             cout << letra;
         }
         cout << endl;
