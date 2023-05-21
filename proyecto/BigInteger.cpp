@@ -21,7 +21,7 @@ BigInteger::BigInteger(BigInteger& other) {
 
 
 
-//operación "add" suma los dígitos de dos BigInteger y
+//Esta operación "add" suma los dígitos de dos BigInteger y
 //los almacena en un nuevo objeto BigInteger,
 //teniendo en cuenta el acarreo en caso de que la suma supere el valor de 9 en algún dígito.
 
