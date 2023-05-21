@@ -2,7 +2,7 @@
 
 //Esta implementación recorre cada carácter de la cadena 'numberString' y
 //convierte cada dígito a su valor entero correspondiente, almacenando los dígitos en el vector digits.
-BigInteger::BigInteger(const std::string numberString) {
+BigInteger::BigInteger(std::string numberString) {
     for (size_t i = 0; i < numberString.length(); i++) {
         char digit = numberString[i];
         int value = digit - '0';
@@ -15,7 +15,7 @@ BigInteger::BigInteger(const std::string numberString) {
 //Esta función constructora toma como parámetro otra instancia de BigInteger (other)
 // y copia los dígitos de esa instancia en el objeto que se está creando.
 
-BigInteger::BigInteger(const BigInteger& other) {
+BigInteger::BigInteger(BigInteger& other) {
     digits = other.digits;
 }
 
@@ -26,8 +26,7 @@ BigInteger::BigInteger(const BigInteger& other) {
 //teniendo en cuenta el acarreo en caso de que la suma supere el valor de 9 en algún dígito.
 
 
-BigInteger BigInteger::add(const BigInteger& other) const
-{
+BigInteger BigInteger::add(BigInteger& other){
     BigInteger result;
     std::vector<int> sum;
     int carry = 0;
